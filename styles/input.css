@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Vazir-Thin";
+    src: url(../Fonts/Vazir-Thin/Vazir-Thin-FD.eot);
+    src: url(../Fonts/Vazir-Thin/Vazir-Thin-FD.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Thin/Vazir-Thin-FD.woff) format("woff"),
+      url(../Fonts/Vazir-Thin/Vazir-Thin-FD.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Vazir-Light";
+    src: url(../Fonts/Vazir-Light/Vazir-Light.eot);
+    src: url(../Fonts/Vazir-Light/Vazir-Light.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Light/Vazir-Light.woff) format("woff"),
+      url(../Fonts/Vazir-Light/Vazir-Light.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Vazir-Medium";
+    src: url(../Fonts/Vazir-Medium/Vazir-Medium.eot);
+    src: url(../Fonts/Vazir-Medium/Vazir-Medium.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Medium/Vazir-Medium.woff) format("woff"),
+      url(../Fonts/Vazir-Medium/Vazir-Medium.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Vazir-Regular";
+    src: url(../Fonts/Vazir-Regular/Vazir-Regular-FD.eot);
+    src: url(../Fonts/Vazir-Regular/Vazir-Regular-FD.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Regular/Vazir-Regular-FD.woff) format("woff"),
+      url(../Fonts/Vazir-Regular/Vazir-Regular-FD.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Vazir-Black";
+    src: url(../Fonts/Vazir-Black/Vazir-Black.eot);
+    src: url(../Fonts/Vazir-Black/Vazir-Black.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Black/Vazir-Black.woff) format("woff"),
+      url(../Fonts/Vazir-Black/Vazir-Black.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Vazir-Bold";
+    src: url(../Fonts/Vazir-Bold/Vazir-Bold-FD.eot);
+    src: url(../Fonts/Vazir-Bold/Vazir-Bold-FD.eot?#iefix)
+        format("embedded-opentype"),
+      url(../Fonts/Vazir-Bold/Vazir-Bold-FD.woff) format("woff"),
+      url(../Fonts/Vazir-Bold/Vazir-Bold-FD.ttf) format("truetype");
+  }
+
+  body {
+    font-family: "Vazir-Regular", Calibri, "Arial Narrow", Arial, sans-serif;
+    @apply scroll-bar text-gray-100 overflow-x-hidden;
+  }
+
+  /* width */
+  .scroll-bar::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  .scroll-bar::-webkit-scrollbar-track {
+    background: #ffffff05;
+  }
+  /* Handle */
+  .scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 1000px;
+    background: #7785;
+    transition: all 0.2s;
+  }
+  /* Handle on hover */
+  .scroll-bar::-webkit-scrollbar-thumb:hover {
+    background: #5555;
+  }
+
+  #chatSheet {
+    @apply flex flex-col h-full justify-start py-4 px-4 md:w-9/12 lg:w-5/12 gap-y-1 font-vazir mx-auto overflow-x-hidden;
+  }
+
+  .message-second {
+    @apply flex-1 flex flex-row-reverse relative;
+  }
+
+  .message-prime {
+    @apply flex-1 flex justify-start relative;
+  }
+
+  .message-svg-second {
+    @apply flex-none absolute -right-[7px] -top-[0.5px] text-MessageSecond;
+  }
+
+  .message-svg-prime {
+    @apply flex-none absolute -left-[7px] -top-[0.5px] text-MessagePrime;
+  }
+
+  .message-container-second,
+  .message-container-prime {
+    @apply flex items-end max-w-md rounded-lg shadow-md shadow-black/20 px-4 py-2 gap-2;
+  }
+
+  .message-container-second {
+    @apply rounded-tr-none;
+  }
+
+  .message-container-prime {
+    @apply rounded-tl-none;
+  }
+
+  .message-text {
+    @apply text-white text-sm align-middle font-vazir-thin;
+    direction: rtl !important;
+  }
+
+  .message-contact {
+    @apply flex flex-row-reverse items-center gap-4 justify-end;
+  }
+
+  .contact-image {
+    @apply bg-gray-400 border-4 border-gray-300 w-14 h-14 rounded-full flex justify-center items-center;
+  }
+
+  .contact-text {
+    @apply flex-1 w-36 text-white text-right py-4;
+  }
+
+  .contact-phone {
+    @apply text-lg font-vazir-bold;
+  }
+
+  .contact-name {
+    @apply text-sm opacity-60 font-vazir-thin;
+  }
+
+  .message-time {
+    @apply text-neutral-400 text-xs align-bottom font-vazir-thin;
+    direction: rtl !important;
+  }
+
+  .link {
+    @apply text-sky-400 hover:text-sky-300 transition-colors duration-200 text-sm align-middle font-vazir-thin;
+    direction: rtl !important;
+  }
+}
